@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@vlototskyi/nestjs-google-storage": [
+        "packages/nestjs-google-storage/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
