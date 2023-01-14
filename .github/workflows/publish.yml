@@ -22,7 +22,7 @@ jobs:
         id: cache-primes
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json')
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies # (3)
         if: steps.cache-primes.outputs.cache-hit != 'true'
         run: npm ci
@@ -44,7 +44,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }} # (1)
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - run: npm ci
       - run: npx nx workspace-lint
@@ -69,7 +69,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }} # (1)
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - run: npm ci
       - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
@@ -92,7 +92,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }} # (1)
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - run: npm ci
       - run: npx nx affected --target=build --parallel=3
@@ -115,7 +115,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }} # (1)
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - run: npm ci
       - run: npx nx affected --target=publish --parallel=3
