@@ -39,7 +39,6 @@ invariant(
 
 process.chdir(outputPath);
 
-
 // Updating the version in "package.json" before publishing
 try {
   const json = JSON.parse(readFileSync(`package.json`).toString());
