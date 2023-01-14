@@ -1,6 +1,6 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { File, Storage, StorageOptions } from "@google-cloud/storage";
-import { MODULE_OPTIONS_TOKEN } from "./storage.module-definition";
+import { Inject, Injectable } from '@nestjs/common';
+import { File, Storage, StorageOptions } from '@google-cloud/storage';
+import { MODULE_OPTIONS_TOKEN } from './storage.module-definition';
 
 @Injectable()
 export class StorageClient extends Storage {

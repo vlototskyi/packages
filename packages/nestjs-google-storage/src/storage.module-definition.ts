@@ -11,7 +11,7 @@ export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
           ...definition,
           global: extras.isGlobal !== undefined ? extras.isGlobal : true,
         };
-      },
+      }
     )
     .setClassMethodName('forRoot')
     .build();
