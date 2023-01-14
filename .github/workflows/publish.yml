@@ -53,4 +53,3 @@ jobs:
           main-branch-name: 'master'
       - run: npm ci
       - run: npx nx affected --target=publish--parallel=3
-
