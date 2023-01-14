@@ -15,7 +15,6 @@ jobs:
           main-branch-name: 'master'
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Cache NPM dependencies # (2)
         uses: actions/cache@v3
@@ -38,7 +37,6 @@ jobs:
           main-branch-name: 'master'
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Cache NPM dependencies
@@ -63,7 +61,6 @@ jobs:
           main-branch-name: 'master'
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Cache NPM dependencies
@@ -86,7 +83,6 @@ jobs:
           main-branch-name: 'master'
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Cache NPM dependencies
@@ -109,7 +105,6 @@ jobs:
           main-branch-name: 'master'
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Cache NPM dependencies
