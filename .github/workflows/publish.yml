@@ -45,7 +45,6 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - run: npm ci
       - run: npx nx workspace-lint
       - run: npx nx format:check
       - run: npx nx affected --target=lint --parallel=3
@@ -69,7 +68,6 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - run: npm ci
       - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
   build:
     needs: test
@@ -91,7 +89,6 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - run: npm ci
       - run: npx nx affected --target=build --parallel=3
   publish:
     needs: build
@@ -113,5 +110,4 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - run: npm ci
       - run: npx nx affected --target=publish --parallel=3
