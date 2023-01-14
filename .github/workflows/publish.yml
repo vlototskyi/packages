@@ -91,7 +91,7 @@ jobs:
 
       - run: npx nx affected --target=build --parallel=3
   publish:
-    needs: [lint, test, install]
+    needs: [lint, test, build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
